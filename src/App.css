@@ -1,3 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500;900&family=Source+Sans+Pro:wght@400;700&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+}
+
+.article-card {
+  border: black solid 1px;
+  padding: 0.4em;
+}
+
+.header-wrapper {
+  height: 100px;
+  padding-left: 15vw;
+  padding-right: 15vw;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: red;
+}
+
+.header-wrapper h1 {
+  font-weight: 900;
+  font-size: 40px;
+}
+.upper-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-icon {
+  height: 40px;
+  width: 40px;
+  background-image: url("");
+  background-size: 40px 40px;
 }
