@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import * as api from "../utils/api";
 import ArticleCard from "./ArticleCard";
 
 const ArticlesList = () => {
   const [articles, setArticles] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const { topic } = useParams();
 
   useEffect(() => {
-    api.getArticles().then((articles) => {
+    api.getArticles(topic).then((articles) => {
       setArticles(articles);
       setIsLoading(false);
     });
-  }, []);
+  }, [topic]);
 
   if (isLoading) return <p>LOADING PAGE...</p>;
 
